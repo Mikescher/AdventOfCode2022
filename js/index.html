@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<title>AdventOfCode 2022</title>
+</head>
+
+<body>
+
+
+    <button class="runbtn" id="btn01_1">Solution 01 - 1</button>
+    <button class="runbtn" id="btn01_2">Solution 01 - 2</button>
+
+    <script type="text/javascript">
+
+        window.addEventListener("load", function ()
+        {
+            for (let btn of document.getElementsByClassName("runbtn")) {
+
+                let rid = btn.id.substr(3);
+                btn.onclick = function () { 
+                    var script = document.createElement('script');
+                    script.src = 'solution'+rid+'.js';
+                    script.type = 'text/javascript';
+
+                    script.onload = function () {  alert(window['js_run'+rid]()); };
+
+                    document.getElementsByTagName('head')[0].appendChild(script);
+
+                    return false; 
+                };
+            } 
+        }, false);
+    </script>
+
+</body>
+
+</html>
