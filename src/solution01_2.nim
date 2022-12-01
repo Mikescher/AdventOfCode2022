@@ -19,8 +19,8 @@ proc run01_2(): string =
 
     return intToStr(elves[0]+elves[1]+elves[2])
 
-proc js_run01_2(): cstring {.exportc.} =
-    return cstring(run01_2())
-
 when not defined(js):
     echo run01_2()
+else:
+    proc js_run01_2(): cstring {.exportc.} =
+        return cstring(run01_2())
