@@ -1,5 +1,7 @@
 
 proc run20_1(): string =
+    const input = staticRead"../input/day20.txt"
+
     return "TODO"
 
 

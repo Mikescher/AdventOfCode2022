@@ -1,5 +1,7 @@
 
 proc run02_1(): string =
+    const input = staticRead"../input/day02.txt"
+
     return "TODO"
 
 when not defined(js):
