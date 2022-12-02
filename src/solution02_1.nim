@@ -1,25 +1,29 @@
 import std/strutils
 
+const ROCK = 0
+const PAPE = 1
+const SCIS = 2
+
 proc get_rps_winner(m1: int, m2: int): int =
-    if m1 == 0 and m2 == 0:
+    if m1 == ROCK and m2 == ROCK:
         return 0
-    if m1 == 0 and m2 == 1:
+    if m1 == ROCK and m2 == PAPE:
         return 2
-    if m1 == 0 and m2 == 2:
+    if m1 == ROCK and m2 == SCIS:
         return 1
 
-    if m1 == 1 and m2 == 0:
+    if m1 == PAPE and m2 == ROCK:
         return 1
-    if m1 == 1 and m2 == 1:
+    if m1 == PAPE and m2 == PAPE:
         return 0
-    if m1 == 1 and m2 == 2:
+    if m1 == PAPE and m2 == SCIS:
         return 2
 
-    if m1 == 2 and m2 == 0:
+    if m1 == SCIS and m2 == ROCK:
         return 2
-    if m1 == 2 and m2 == 1:
+    if m1 == SCIS and m2 == PAPE:
         return 1
-    if m1 == 2 and m2 == 2:
+    if m1 == SCIS and m2 == SCIS:
         return 0
 
     return -1
