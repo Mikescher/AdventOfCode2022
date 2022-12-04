@@ -2,18 +2,61 @@
 var framePtr = null;
 var excHandler = 0;
 var lastJSError = null;
+var NTI33555114 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI33555125 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI603980150 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI33555124 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI603980256 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI33555128 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI33555130 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI33555083 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI33555165 = {size: 0, kind: 22, base: null, node: null, finalizer: null};
+var NTI33554440 = {size: 0,kind: 29,base: null,node: null,finalizer: null};
+var NTI33555164 = {size: 0, kind: 22, base: null, node: null, finalizer: null};
+var NTI33555112 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI33555113 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI33555120 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI33555122 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI33554439 = {size: 0,kind: 28,base: null,node: null,finalizer: null};
-
-function makeNimstrLit(c_33556801) {
-      var result = [];
-  for (var i = 0; i < c_33556801.length; ++i) {
-    result[i] = c_33556801.charCodeAt(i);
-  }
-  return result;
-  
-
-  
-}
+var NTI452985127 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+NTI452985127.base = NTI33554439;
+var NNI33555122 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
+NTI33555122.node = NNI33555122;
+var NNI33555120 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
+NTI33555120.node = NNI33555120;
+var NNI33555113 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
+NTI33555113.node = NNI33555113;
+NTI33555164.base = NTI33555112;
+NTI33555165.base = NTI33555112;
+var NNI33555112 = {kind: 2, len: 5, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "parent", len: 0, typ: NTI33555164, name: "parent", sons: null}, 
+{kind: 1, offset: "name", len: 0, typ: NTI33554440, name: "name", sons: null}, 
+{kind: 1, offset: "message", len: 0, typ: NTI33554439, name: "msg", sons: null}, 
+{kind: 1, offset: "trace", len: 0, typ: NTI33554439, name: "trace", sons: null}, 
+{kind: 1, offset: "up", len: 0, typ: NTI33555165, name: "up", sons: null}]};
+NTI33555112.node = NNI33555112;
+var NNI33555083 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
+NTI33555083.node = NNI33555083;
+NTI33555112.base = NTI33555083;
+NTI33555113.base = NTI33555112;
+NTI33555120.base = NTI33555113;
+NTI33555122.base = NTI33555120;
+var NNI33555130 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
+NTI33555130.node = NNI33555130;
+NTI33555130.base = NTI33555113;
+var NNI33555128 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
+NTI33555128.node = NNI33555128;
+NTI33555128.base = NTI33555113;
+NTI603980256.base = NTI33554439;
+var NNI33555124 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
+NTI33555124.node = NNI33555124;
+NTI33555124.base = NTI33555113;
+NTI603980150.base = NTI33554439;
+var NNI33555125 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
+NTI33555125.node = NNI33555125;
+var NNI33555114 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
+NTI33555114.node = NNI33555114;
+NTI33555114.base = NTI33555112;
+NTI33555125.base = NTI33555114;
 
 function setConstr() {
         var result = {};
@@ -109,6 +152,24 @@ function nimCopy(dest_33557140, src_33557141, ti_33557142) {
 
 }
 
+function makeNimstrLit(c_33556801) {
+      var result = [];
+  for (var i = 0; i < c_33556801.length; ++i) {
+    result[i] = c_33556801.charCodeAt(i);
+  }
+  return result;
+  
+
+  
+}
+
+function mnewString(len_33556893) {
+        return new Array(len_33556893);
+  
+
+  
+}
+
 function toJSStr(s_33556807) {
                     var Temporary5;
             var Temporary7;
@@ -175,6 +236,164 @@ function toJSStr(s_33556807) {
   return result_33556808;
 
 }
+
+function raiseException(e_33556667, ename_33556668) {
+    e_33556667.name = ename_33556668;
+    if ((excHandler == 0)) {
+    unhandledException(e_33556667);
+    }
+    
+    throw e_33556667;
+
+  
+}
+
+function addInt(a_33556940, b_33556941) {
+        var result = a_33556940 + b_33556941;
+    checkOverflowInt(result);
+    return result;
+  
+
+  
+}
+
+function chckRange(i_33557189, a_33557190, b_33557191) {
+      var Temporary1;
+
+  var result_33557192 = 0;
+
+  BeforeRet: do {
+      if (!(a_33557190 <= i_33557189)) Temporary1 = false; else {        Temporary1 = (i_33557189 <= b_33557191);      }    if (Temporary1) {
+    result_33557192 = i_33557189;
+    break BeforeRet;
+    }
+    else {
+    raiseRangeError();
+    }
+    
+  } while (false);
+
+  return result_33557192;
+
+}
+
+function chckIndx(i_33557184, a_33557185, b_33557186) {
+      var Temporary1;
+
+  var result_33557187 = 0;
+
+  BeforeRet: do {
+      if (!(a_33557185 <= i_33557184)) Temporary1 = false; else {        Temporary1 = (i_33557184 <= b_33557186);      }    if (Temporary1) {
+    result_33557187 = i_33557184;
+    break BeforeRet;
+    }
+    else {
+    raiseIndexError(i_33557184, a_33557185, b_33557186);
+    }
+    
+  } while (false);
+
+  return result_33557187;
+
+}
+var ConstSet2 = setConstr(13, 10);
+
+function nimMax(a_33556998, b_33556999) {
+    var Temporary1;
+
+  var result_33557000 = 0;
+
+  BeforeRet: do {
+    if ((b_33556999 <= a_33556998)) {
+    Temporary1 = a_33556998;
+    }
+    else {
+    Temporary1 = b_33556999;
+    }
+    
+    result_33557000 = Temporary1;
+    break BeforeRet;
+  } while (false);
+
+  return result_33557000;
+
+}
+
+function subInt(a_33556944, b_33556945) {
+        var result = a_33556944 - b_33556945;
+    checkOverflowInt(result);
+    return result;
+  
+
+  
+}
+
+function nimMin(a_33556994, b_33556995) {
+    var Temporary1;
+
+  var result_33556996 = 0;
+
+  BeforeRet: do {
+    if ((a_33556994 <= b_33556995)) {
+    Temporary1 = a_33556994;
+    }
+    else {
+    Temporary1 = b_33556995;
+    }
+    
+    result_33556996 = Temporary1;
+    break BeforeRet;
+  } while (false);
+
+  return result_33556996;
+
+}
+
+function eqStrings(a_33556931, b_33556932) {
+        if (a_33556931 == b_33556932) return true;
+    if (a_33556931 === null && b_33556932.length == 0) return true;
+    if (b_33556932 === null && a_33556931.length == 0) return true;
+    if ((!a_33556931) || (!b_33556932)) return false;
+    var alen = a_33556931.length;
+    if (alen != b_33556932.length) return false;
+    for (var i = 0; i < alen; ++i)
+      if (a_33556931[i] != b_33556932[i]) return false;
+    return true;
+  
+
+  
+}
+var ConstSet3 = setConstr([48, 57]);
+var ConstSet4 = setConstr([48, 57]);
+
+function rawEcho() {
+          var buf = "";
+      for (var i = 0; i < arguments.length; ++i) {
+        buf += toJSStr(arguments[i]);
+      }
+      console.log(buf);
+    
+
+  
+}
+
+function absInt(a_33556988) {
+    var Temporary1;
+
+  var result_33556989 = 0;
+
+    if ((a_33556988 < 0)) {
+    Temporary1 = (a_33556988 * -1);
+    }
+    else {
+    Temporary1 = a_33556988;
+    }
+    
+    result_33556989 = Temporary1;
+
+  return result_33556989;
+
+}
 if (!Math.trunc) {
   Math.trunc = function(v) {
     v = +v;
@@ -183,6 +402,14 @@ if (!Math.trunc) {
   };
 }
 
+
+function newSeq_452985301(len_452985303) {
+  var result_452985304 = [];
+
+    result_452985304 = new Array(len_452985303); for (var i = 0 ; i < len_452985303 ; ++i) { result_452985304[i] = []; }
+  return result_452985304;
+
+}
 
 function isFatPointer_33557131(ti_33557132) {
   var result_33557133 = false;
@@ -222,16 +449,16 @@ function nimCopyAux(dest_33557144, src_33557145, n_33557146) {
   
 }
 
-function run04_1_469762049() {
-  var result_469762050 = [];
+function add_33556419(x_33556420, x_33556420_Idx, y_33556421) {
+          if (x_33556420[x_33556420_Idx] === null) { x_33556420[x_33556420_Idx] = []; }
+      var off = x_33556420[x_33556420_Idx].length;
+      x_33556420[x_33556420_Idx].length += y_33556421.length;
+      for (var i = 0; i < y_33556421.length; ++i) {
+        x_33556420[x_33556420_Idx][off+i] = y_33556421.charCodeAt(i);
+      }
+    
 
-  BeforeRet: do {
-    result_469762050 = nimCopy(null, makeNimstrLit("TODO"), NTI33554439);
-    break BeforeRet;
-  } while (false);
-
-  return result_469762050;
-
+  
 }
 
 function newSeq_33556825(len_33556827) {
@@ -242,14 +469,515 @@ function newSeq_33556825(len_33556827) {
 
 }
 
-function js_run04_1() {
-  var result_469762052 = null;
+function unhandledException(e_33556663) {
+    var buf_33556664 = [[]];
+    if (!(((e_33556663.message).length == 0))) {
+    buf_33556664[0].push.apply(buf_33556664[0], makeNimstrLit("Error: unhandled exception: "));;
+    buf_33556664[0].push.apply(buf_33556664[0], e_33556663.message);;
+    }
+    else {
+    buf_33556664[0].push.apply(buf_33556664[0], makeNimstrLit("Error: unhandled exception"));;
+    }
+    
+    buf_33556664[0].push.apply(buf_33556664[0], makeNimstrLit(" ["));;
+    add_33556419(buf_33556664, 0, e_33556663.name);
+    buf_33556664[0].push.apply(buf_33556664[0], makeNimstrLit("]\x0A"));;
+    var cbuf_33556665 = toJSStr(buf_33556664[0]);
+    framePtr = null;
+      if (typeof(Error) !== "undefined") {
+    throw new Error(cbuf_33556665);
+  }
+  else {
+    throw cbuf_33556665;
+  }
+  
+
+  
+}
+
+function raiseOverflow() {
+    raiseException({message: makeNimstrLit("over- or underflow"), parent: null, m_type: NTI33555122, name: null, trace: [], up: null}, "OverflowDefect");
+
+  
+}
+
+function checkOverflowInt(a_33556938) {
+        if (a_33556938 > 2147483647 || a_33556938 < -2147483648) raiseOverflow();
+  
+
+  
+}
+
+function raiseRangeError() {
+    raiseException({message: makeNimstrLit("value out of range"), parent: null, m_type: NTI33555130, name: null, trace: [], up: null}, "RangeDefect");
+
+  
+}
+
+function addChars_251658415(result_251658417, result_251658417_Idx, x_251658418, start_251658419, n_251658420) {
+    var old_251658421 = (result_251658417[result_251658417_Idx]).length;
+    (result_251658417[result_251658417_Idx].length = chckRange(addInt(old_251658421, n_251658420), 0, 2147483647));
+    Label1: do {
+      var iHEX60gensym4_251658435 = 0;
+      var i_469762166 = 0;
+      Label2: do {
+          Label3: while (true) {
+          if (!(i_469762166 < n_251658420)) break Label3;
+            iHEX60gensym4_251658435 = i_469762166;
+            result_251658417[result_251658417_Idx][chckIndx(addInt(old_251658421, iHEX60gensym4_251658435), 0, (result_251658417[result_251658417_Idx]).length - 1)] = x_251658418.charCodeAt(chckIndx(addInt(start_251658419, iHEX60gensym4_251658435), 0, (x_251658418).length - 1));
+            i_469762166 = addInt(i_469762166, 1);
+          }
+      } while (false);
+    } while (false);
+
+  
+}
+
+function addChars_251658411(result_251658413, result_251658413_Idx, x_251658414) {
+    addChars_251658415(result_251658413, result_251658413_Idx, x_251658414, 0, ((x_251658414) == null ? 0 : (x_251658414).length));
+
+  
+}
+
+function addInt_251658436(result_251658437, result_251658437_Idx, x_251658438) {
+    addChars_251658411(result_251658437, result_251658437_Idx, ((x_251658438) + ""));
+
+  
+}
+
+function addInt_251658457(result_251658458, result_251658458_Idx, x_251658459) {
+    addInt_251658436(result_251658458, result_251658458_Idx, x_251658459);
+
+  
+}
+
+function HEX24_335544323(x_335544324) {
+  var result_335544325 = [[]];
+
+    addInt_251658457(result_335544325, 0, x_335544324);
+
+  return result_335544325[0];
+
+}
+
+function raiseIndexError(i_33556754, a_33556755, b_33556756) {
+    var Temporary1;
+
+    if ((b_33556756 < a_33556755)) {
+    Temporary1 = makeNimstrLit("index out of bounds, the container is empty");
+    }
+    else {
+    Temporary1 = (makeNimstrLit("index ") || []).concat(HEX24_335544323(i_33556754) || [],makeNimstrLit(" not in ") || [],HEX24_335544323(a_33556755) || [],makeNimstrLit(" .. ") || [],HEX24_335544323(b_33556756) || []);
+    }
+    
+    raiseException({message: nimCopy(null, Temporary1, NTI33554439), parent: null, m_type: NTI33555128, name: null, trace: [], up: null}, "IndexDefect");
+
+  
+}
+
+function filter_469762059(s_469762061, pred_469762063) {
+  var result_469762064 = [];
+
+    result_469762064 = nimCopy(null, newSeq_452985301(0), NTI452985127);
+    Label1: do {
+      var i_469762075 = 0;
+      var colontmp__469762159 = 0;
+      colontmp__469762159 = (s_469762061).length;
+      var i_469762160 = 0;
+      Label2: do {
+          Label3: while (true) {
+          if (!(i_469762160 < colontmp__469762159)) break Label3;
+            i_469762075 = i_469762160;
+            if (pred_469762063(s_469762061[chckIndx(i_469762075, 0, (s_469762061).length - 1)])) {
+            var Temporary4 = nimCopy(null, s_469762061[chckIndx(i_469762075, 0, (s_469762061).length - 1)], NTI33554439);
+            result_469762064.push(Temporary4);;
+            }
+            
+            i_469762160 = addInt(i_469762160, 1);
+          }
+      } while (false);
+    } while (false);
+
+  return result_469762064;
+
+}
+
+function substr_33557906(s_33557907, first_33557908, last_33557909) {
+  var result_33557910 = [];
+
+    var first_33557911 = nimMax(first_33557908, 0);
+    var L_33557912 = nimMax(addInt(subInt(nimMin(last_33557909, (s_33557907).length - 1), first_33557911), 1), 0);
+    result_33557910 = nimCopy(null, mnewString(chckRange(L_33557912, 0, 2147483647)), NTI33554439);
+    Label1: do {
+      var i_33557917 = 0;
+      var colontmp__469762179 = 0;
+      colontmp__469762179 = subInt(L_33557912, 1);
+      var res_469762180 = 0;
+      Label2: do {
+          Label3: while (true) {
+          if (!(res_469762180 <= colontmp__469762179)) break Label3;
+            i_33557917 = res_469762180;
+            result_33557910[chckIndx(i_33557917, 0, (result_33557910).length - 1)] = s_33557907[chckIndx(addInt(i_33557917, first_33557911), 0, (s_33557907).length - 1)];
+            res_469762180 = addInt(res_469762180, 1);
+          }
+      } while (false);
+    } while (false);
+
+  return result_33557910;
+
+}
+
+function nsuSplitLines(s_603980402, keepEol_603980403) {
+            var Temporary6;
+
+  var result_603980404 = [];
+
+    result_603980404 = nimCopy(null, [], NTI603980256);
+    Label1: do {
+      var xHEX60gensym76_603980410 = [];
+      var first_469762173 = 0;
+      var last_469762174 = 0;
+      var eolpos_469762175 = 0;
+      Label2: do {
+          Label3: while (true) {
+          if (!true) break Label3;
+            Label4: do {
+                Label5: while (true) {
+                if (!((last_469762174 < (s_603980402).length) && !((ConstSet2[s_603980402[chckIndx(last_469762174, 0, (s_603980402).length - 1)]] != undefined)))) break Label5;
+                  last_469762174 = addInt(last_469762174, 1);
+                }
+            } while (false);
+            eolpos_469762175 = last_469762174;
+            if ((last_469762174 < (s_603980402).length)) {
+            if ((s_603980402[chckIndx(last_469762174, 0, (s_603980402).length - 1)] == 10)) {
+            last_469762174 = addInt(last_469762174, 1);
+            }
+            else {
+            if ((s_603980402[chckIndx(last_469762174, 0, (s_603980402).length - 1)] == 13)) {
+            last_469762174 = addInt(last_469762174, 1);
+            if (((last_469762174 < (s_603980402).length) && (s_603980402[chckIndx(last_469762174, 0, (s_603980402).length - 1)] == 10))) {
+            last_469762174 = addInt(last_469762174, 1);
+            }
+            
+            }
+            }
+            }
+            
+            if (keepEol_603980403) {
+            Temporary6 = subInt(last_469762174, 1);
+            }
+            else {
+            Temporary6 = subInt(eolpos_469762175, 1);
+            }
+            
+            xHEX60gensym76_603980410 = substr_33557906(s_603980402, first_469762173, Temporary6);
+            var Temporary7 = nimCopy(null, xHEX60gensym76_603980410, NTI33554439);
+            result_603980404.push(Temporary7);;
+            if ((eolpos_469762175 == last_469762174)) {
+            break Label2;
+            }
+            
+            first_469762173 = last_469762174;
+          }
+      } while (false);
+    } while (false);
+
+  return result_603980404;
+
+}
+
+function sysFatal_218103842(message_218103845) {
+    raiseException({message: nimCopy(null, message_218103845, NTI33554439), m_type: NTI33555124, parent: null, name: null, trace: [], up: null}, "AssertionDefect");
+
+  
+}
+
+function raiseAssert_218103840(msg_218103841) {
+    sysFatal_218103842(msg_218103841);
+
+  
+}
+
+function failedAssertImpl_218103864(msg_218103865) {
+    raiseAssert_218103840(msg_218103865);
+
+  
+}
+
+function substrEq_603980005(s_603980006, pos_603980007, substr_603980008) {
+  var result_603980009 = false;
 
   BeforeRet: do {
-    result_469762052 = toJSStr(run04_1_469762049());
+    var i_603980010 = 0;
+    var length_603980011 = (substr_603980008).length;
+    Label1: do {
+        Label2: while (true) {
+        if (!(((i_603980010 < length_603980011) && (addInt(pos_603980007, i_603980010) < (s_603980006).length)) && (s_603980006[chckIndx(addInt(pos_603980007, i_603980010), 0, (s_603980006).length - 1)] == substr_603980008[chckIndx(i_603980010, 0, (substr_603980008).length - 1)]))) break Label2;
+          i_603980010 = addInt(i_603980010, 1);
+        }
+    } while (false);
+    result_603980009 = (i_603980010 == length_603980011);
+    break BeforeRet;
+  } while (false);
+
+  return result_603980009;
+
+}
+
+function nsuSplitString(s_603980297, sep_603980298, maxsplit_603980299) {
+  var result_603980300 = [];
+
+    if (!((0 < (sep_603980298).length))) {
+    failedAssertImpl_218103864(makeNimstrLit("strutils.nim(739, 11) `sep.len > 0` "));
+    }
+    
+    result_603980300 = nimCopy(null, [], NTI603980150);
+    Label1: do {
+      var xHEX60gensym72_603980311 = [];
+      var lastHEX60gensym41_469762185 = 0;
+      var splitsHEX60gensym41_469762186 = maxsplit_603980299;
+      Label2: do {
+          Label3: while (true) {
+          if (!(lastHEX60gensym41_469762185 <= (s_603980297).length)) break Label3;
+            var firstHEX60gensym41_469762188 = lastHEX60gensym41_469762185;
+            Label4: do {
+                Label5: while (true) {
+                if (!((lastHEX60gensym41_469762185 < (s_603980297).length) && !(substrEq_603980005(s_603980297, lastHEX60gensym41_469762185, sep_603980298)))) break Label5;
+                  lastHEX60gensym41_469762185 = addInt(lastHEX60gensym41_469762185, 1);
+                }
+            } while (false);
+            if ((splitsHEX60gensym41_469762186 == 0)) {
+            lastHEX60gensym41_469762185 = (s_603980297).length;
+            }
+            
+            xHEX60gensym72_603980311 = substr_33557906(s_603980297, firstHEX60gensym41_469762188, subInt(lastHEX60gensym41_469762185, 1));
+            var Temporary6 = nimCopy(null, xHEX60gensym72_603980311, NTI33554439);
+            result_603980300.push(Temporary6);;
+            if ((splitsHEX60gensym41_469762186 == 0)) {
+            break Label2;
+            }
+            
+            splitsHEX60gensym41_469762186 = subInt(splitsHEX60gensym41_469762186, 1);
+            lastHEX60gensym41_469762185 = addInt(lastHEX60gensym41_469762185, (sep_603980298).length);
+          }
+      } while (false);
+    } while (false);
+
+  return result_603980300;
+
+}
+
+function integerOutOfRangeError_620757240() {
+    raiseException({message: makeNimstrLit("Parsed integer outside of valid range"), parent: null, m_type: NTI33555125, name: null, trace: [], up: null}, "ValueError");
+
+  
+}
+
+function rawParseInt_620757260(s_620757261, b_620757262, b_620757262_Idx, start_620757263) {
+      var Temporary1;
+          var Temporary4;
+      var Temporary7;
+
+  var result_620757264 = 0;
+
+    var sign_620757265 = -1;
+    var i_620757266 = start_620757263;
+    if ((i_620757266 < (s_620757261).length)) {
+    if ((s_620757261[chckIndx(i_620757266, 0, (s_620757261).length - 1)] == 43)) {
+    i_620757266 += 1;
+    }
+    else {
+    if ((s_620757261[chckIndx(i_620757266, 0, (s_620757261).length - 1)] == 45)) {
+    i_620757266 += 1;
+    sign_620757265 = 1;
+    }
+    }
+    }
+    
+      if (!(i_620757266 < (s_620757261).length)) Temporary1 = false; else {        Temporary1 = (ConstSet3[s_620757261[chckIndx(i_620757266, 0, (s_620757261).length - 1)]] != undefined);      }    if (Temporary1) {
+    b_620757262[b_620757262_Idx] = 0;
+    Label2: do {
+        Label3: while (true) {
+          if (!(i_620757266 < (s_620757261).length)) Temporary4 = false; else {            Temporary4 = (ConstSet4[s_620757261[chckIndx(i_620757266, 0, (s_620757261).length - 1)]] != undefined);          }        if (!Temporary4) break Label3;
+          var c_620757289 = (s_620757261[chckIndx(i_620757266, 0, (s_620757261).length - 1)] - 48);
+          if ((Math.trunc((-9223372036854775808 + c_620757289) / 10) <= b_620757262[b_620757262_Idx])) {
+          b_620757262[b_620757262_Idx] = ((b_620757262[b_620757262_Idx] * 10) - c_620757289);
+          }
+          else {
+          integerOutOfRangeError_620757240();
+          }
+          
+          i_620757266 += 1;
+          Label5: do {
+              Label6: while (true) {
+              if (!((i_620757266 < (s_620757261).length) && (s_620757261[chckIndx(i_620757266, 0, (s_620757261).length - 1)] == 95))) break Label6;
+                i_620757266 += 1;
+              }
+          } while (false);
+        }
+    } while (false);
+      if (!(sign_620757265 == -1)) Temporary7 = false; else {        Temporary7 = (b_620757262[b_620757262_Idx] == -9223372036854775808);      }    if (Temporary7) {
+    integerOutOfRangeError_620757240();
+    }
+    else {
+      b_620757262[b_620757262_Idx] = (b_620757262[b_620757262_Idx] * sign_620757265);
+      result_620757264 = (i_620757266 - start_620757263);
+    }
+    
+    }
+    
+
+  return result_620757264;
+
+}
+
+function npuParseBiggestInt(s_620757307, number_620757308, number_620757308_Idx, start_620757309) {
+  var result_620757310 = 0;
+
+    var res_620757311 = [0];
+    result_620757310 = rawParseInt_620757260(s_620757307, res_620757311, 0, start_620757309);
+    if (!((result_620757310 == 0))) {
+    number_620757308[number_620757308_Idx] = res_620757311[0];
+    }
+    
+
+  return result_620757310;
+
+}
+
+function npuParseInt(s_620757313, number_620757314, number_620757314_Idx, start_620757315) {
+      var Temporary1;
+
+  var result_620757316 = 0;
+
+    var res_620757317 = [0];
+    result_620757316 = npuParseBiggestInt(s_620757313, res_620757317, 0, start_620757315);
+      if ((res_620757317[0] < -2147483648)) Temporary1 = true; else {        Temporary1 = (2147483647 < res_620757317[0]);      }    if (Temporary1) {
+    integerOutOfRangeError_620757240();
+    }
+    
+    if (!((result_620757316 == 0))) {
+    number_620757314[number_620757314_Idx] = chckRange(res_620757317[0], -2147483648, 2147483647);
+    }
+    
+
+  return result_620757316;
+
+}
+
+function nsuParseInt(s_603980574) {
+      var Temporary1;
+
+  var result_603980575 = [0];
+
+    result_603980575[0] = 0;
+    var L_603980576 = npuParseInt(s_603980574, result_603980575, 0, 0);
+      if (!((L_603980576 == (s_603980574).length))) Temporary1 = true; else {        Temporary1 = (L_603980576 == 0);      }    if (Temporary1) {
+    raiseException({message: (makeNimstrLit("invalid integer: ") || []).concat(s_603980574 || []), parent: null, m_type: NTI33555125, name: null, trace: [], up: null}, "ValueError");
+    }
+    
+
+  return result_603980575[0];
+
+}
+
+function nsuIntToStr(x_603980565, minchars_603980566) {
+  var result_603980567 = [];
+
+    result_603980567 = nimCopy(null, HEX24_335544323(absInt(x_603980565)), NTI33554439);
+    Label1: do {
+      var i_603980572 = 0;
+      var colontmp__469762194 = 0;
+      colontmp__469762194 = subInt(minchars_603980566, (result_603980567).length);
+      var res_469762195 = 1;
+      Label2: do {
+          Label3: while (true) {
+          if (!(res_469762195 <= colontmp__469762194)) break Label3;
+            i_603980572 = res_469762195;
+            result_603980567 = nimCopy(null, [48].concat(result_603980567 || []), NTI33554439);
+            res_469762195 = addInt(res_469762195, 1);
+          }
+      } while (false);
+    } while (false);
+    if ((x_603980565 < 0)) {
+    result_603980567 = nimCopy(null, [45].concat(result_603980567 || []), NTI33554439);
+    }
+    
+
+  return result_603980567;
+
+}
+
+function run04_1_469762051() {
+    
+function HEX3Aanonymous_469762055(p_469762056) {
+      var result_469762057 = false;
+
+        result_469762057 = !(eqStrings(p_469762056, []));
+
+      return result_469762057;
+
+    }
+            var Temporary4;
+            var Temporary5;
+            var Temporary6;
+            var Temporary7;
+
+  var result_469762052 = [];
+
+  BeforeRet: do {
+    var ctr_469762054 = 0;
+    var lines_469762080 = filter_469762059(nsuSplitLines(makeNimstrLit("17-99,18-24\x0A14-91,22-91\x0A63-76,66-83\x0A17-57,17-28\x0A77-88,14-78\x0A15-92,14-15\x0A23-23,24-40\x0A14-42,41-42\x0A23-74,21-24\x0A6-94,94-94\x0A16-18,17-52\x0A50-96,40-96\x0A4-67,3-66\x0A26-81,26-99\x0A18-93,24-93\x0A13-18,17-61\x0A7-46,47-92\x0A46-91,46-98\x0A1-73,72-73\x0A51-86,36-52\x0A16-16,13-16\x0A5-35,1-36\x0A14-99,5-15\x0A2-32,2-92\x0A45-86,44-45\x0A10-96,10-97\x0A2-89,89-95\x0A9-95,8-97\x0A40-78,41-50\x0A48-66,4-49\x0A21-24,22-49\x0A43-92,98-98\x0A91-92,42-92\x0A3-95,3-98\x0A8-11,10-99\x0A65-75,40-64\x0A55-83,82-82\x0A34-50,24-35\x0A20-62,19-62\x0A43-74,42-46\x0A28-32,28-32\x0A38-52,51-51\x0A5-75,66-75\x0A32-46,41-55\x0A97-97,2-98\x0A13-34,12-13\x0A33-93,85-99\x0A7-80,12-79\x0A98-98,54-99\x0A37-38,38-79\x0A20-79,28-82\x0A1-1,2-66\x0A7-68,1-30\x0A35-35,36-52\x0A3-46,2-46\x0A21-62,51-63\x0A30-30,29-42\x0A7-64,8-64\x0A4-94,5-93\x0A35-60,36-60\x0A75-76,69-76\x0A6-80,5-95\x0A23-50,24-50\x0A25-92,89-92\x0A34-56,35-35\x0A65-84,65-69\x0A47-76,47-96\x0A1-3,2-98\x0A10-55,16-55\x0A5-89,99-99\x0A8-74,7-74\x0A13-82,13-82\x0A1-99,3-98\x0A11-17,10-29\x0A81-98,63-98\x0A61-71,60-97\x0A6-92,60-91\x0A7-96,6-96\x0A18-81,13-82\x0A46-61,47-91\x0A22-91,19-91\x0A23-23,23-95\x0A20-20,21-96\x0A4-69,8-70\x0A5-22,21-59\x0A74-80,75-81\x0A95-95,24-93\x0A15-85,9-86\x0A6-7,7-93\x0A11-28,10-12\x0A15-27,16-62\x0A12-24,11-33\x0A21-22,22-65\x0A31-73,7-30\x0A2-80,1-81\x0A1-92,1-90\x0A4-38,5-19\x0A1-40,4-94\x0A49-70,48-48\x0A3-91,91-91\x0A32-99,29-33\x0A11-52,10-70\x0A16-95,15-17\x0A18-18,18-26\x0A83-99,83-84\x0A11-94,11-12\x0A27-80,68-80\x0A17-96,95-96\x0A2-83,1-91\x0A58-66,59-65\x0A45-45,14-54\x0A2-3,3-92\x0A47-47,48-85\x0A39-39,39-77\x0A30-31,30-63\x0A10-11,11-43\x0A6-86,10-85\x0A45-57,57-58\x0A1-5,4-97\x0A1-27,2-53\x0A7-90,7-90\x0A3-28,2-3\x0A77-79,8-78\x0A45-48,28-47\x0A13-73,64-74\x0A14-97,14-83\x0A50-51,51-94\x0A21-86,22-22\x0A11-49,12-49\x0A30-68,67-68\x0A48-50,49-81\x0A24-96,23-24\x0A27-44,26-28\x0A9-80,10-74\x0A44-74,2-44\x0A66-73,64-78\x0A8-82,8-82\x0A3-85,55-93\x0A22-65,13-64\x0A10-19,10-26\x0A79-83,29-79\x0A48-56,52-60\x0A25-93,3-93\x0A1-99,5-97\x0A60-81,60-81\x0A15-26,10-24\x0A50-78,10-51\x0A32-75,33-75\x0A11-21,10-93\x0A1-71,1-98\x0A29-65,30-35\x0A52-90,51-52\x0A56-95,75-94\x0A8-9,9-98\x0A2-53,4-52\x0A7-65,3-13\x0A73-83,72-83\x0A9-18,8-76\x0A14-38,4-37\x0A22-57,22-78\x0A2-99,12-98\x0A2-43,20-44\x0A13-88,87-95\x0A5-61,5-63\x0A14-68,14-52\x0A9-89,8-99\x0A43-99,42-43\x0A10-39,39-39\x0A45-60,42-45\x0A39-40,39-89\x0A44-97,96-96\x0A10-96,15-99\x0A50-90,90-94\x0A40-90,39-89\x0A39-39,40-66\x0A15-96,15-96\x0A48-59,49-58\x0A19-58,18-19\x0A21-92,20-91\x0A1-89,1-2\x0A13-91,12-14\x0A70-80,69-94\x0A28-92,27-28\x0A5-95,95-95\x0A21-22,22-74\x0A2-58,3-7\x0A35-51,35-36\x0A88-89,1-89\x0A84-86,73-85\x0A22-63,9-58\x0A44-93,44-45\x0A54-81,53-54\x0A5-91,90-92\x0A12-29,2-25\x0A4-97,97-97\x0A1-90,8-89\x0A17-37,17-37\x0A10-89,15-90\x0A18-19,19-19\x0A24-44,25-75\x0A21-77,17-77\x0A1-99,2-97\x0A12-91,11-91\x0A50-64,50-64\x0A51-97,52-97\x0A7-45,6-6\x0A61-62,61-82\x0A5-8,5-13\x0A13-35,36-94\x0A91-91,44-93\x0A2-78,1-1\x0A51-52,52-80\x0A52-74,52-80\x0A58-63,15-62\x0A9-78,9-9\x0A19-93,20-93\x0A7-18,4-17\x0A27-73,72-98\x0A17-89,16-88\x0A20-83,21-61\x0A55-55,55-96\x0A43-88,48-87\x0A52-62,51-93\x0A5-27,10-26\x0A3-62,2-93\x0A3-95,4-87\x0A30-96,62-97\x0A25-26,46-97\x0A44-82,43-88\x0A9-30,11-97\x0A31-32,31-77\x0A25-26,25-77\x0A18-55,17-19\x0A14-91,15-92\x0A7-76,8-76\x0A62-63,63-66\x0A26-99,7-47\x0A5-79,4-4\x0A2-97,3-97\x0A85-86,35-85\x0A6-90,21-90\x0A44-90,90-90\x0A32-89,33-84\x0A28-88,31-87\x0A27-45,28-43\x0A26-52,47-63\x0A14-53,24-82\x0A26-76,26-70\x0A7-90,9-91\x0A69-69,11-69\x0A10-82,10-47\x0A39-68,40-40\x0A10-94,10-10\x0A28-78,27-82\x0A7-95,96-96\x0A68-83,68-83\x0A28-51,50-50\x0A98-99,2-99\x0A7-65,6-6\x0A52-54,53-80\x0A13-78,13-70\x0A96-96,28-96\x0A59-60,20-60\x0A44-78,36-44\x0A13-15,14-68\x0A38-71,71-72\x0A6-92,6-98\x0A42-77,43-58\x0A31-61,25-60\x0A3-97,12-98\x0A3-36,2-3\x0A29-69,32-96\x0A17-69,17-89\x0A4-96,4-96\x0A79-99,72-97\x0A1-99,98-99\x0A22-95,21-22\x0A2-97,2-3\x0A5-96,4-97\x0A23-24,24-53\x0A6-96,96-98\x0A75-76,4-76\x0A4-67,7-66\x0A53-91,52-98\x0A37-37,38-99\x0A36-94,37-95\x0A21-79,20-22\x0A42-82,41-42\x0A28-54,41-59\x0A57-97,57-57\x0A47-93,48-93\x0A28-96,29-92\x0A15-73,72-73\x0A89-90,90-99\x0A47-49,34-48\x0A80-82,81-84\x0A60-80,59-80\x0A11-12,12-77\x0A36-96,11-37\x0A16-95,4-95\x0A2-98,1-1\x0A51-86,24-52\x0A89-94,2-90\x0A8-9,8-90\x0A2-98,2-3\x0A4-4,4-5\x0A5-98,4-5\x0A67-81,41-81\x0A1-84,84-84\x0A7-95,12-95\x0A5-5,5-86\x0A1-84,30-99\x0A58-88,44-71\x0A50-98,50-98\x0A18-61,31-74\x0A47-48,47-69\x0A2-41,1-41\x0A65-98,65-98\x0A28-62,59-62\x0A3-38,1-4\x0A34-43,41-44\x0A26-91,25-25\x0A17-57,21-57\x0A20-21,21-86\x0A20-82,42-81\x0A1-61,4-70\x0A49-91,26-73\x0A5-78,78-78\x0A27-98,28-98\x0A55-59,54-61\x0A3-94,1-3\x0A6-40,39-99\x0A16-75,17-54\x0A1-96,2-97\x0A7-7,8-96\x0A11-98,11-98\x0A96-98,95-97\x0A5-85,2-85\x0A1-98,1-1\x0A6-11,7-35\x0A5-54,3-68\x0A19-96,20-96\x0A49-85,56-85\x0A33-58,57-57\x0A66-79,67-80\x0A9-99,8-10\x0A10-86,46-86\x0A5-14,13-86\x0A42-96,19-69\x0A2-83,11-83\x0A9-29,9-93\x0A9-80,8-38\x0A28-28,29-82\x0A5-73,5-48\x0A23-54,23-54\x0A17-96,6-74\x0A49-76,48-77\x0A36-59,37-48\x0A12-96,11-97\x0A81-98,82-99\x0A41-41,42-50\x0A9-9,10-15\x0A87-91,11-91\x0A54-63,55-64\x0A45-46,45-70\x0A72-82,68-91\x0A6-94,93-94\x0A18-64,19-64\x0A46-64,34-48\x0A7-62,61-63\x0A2-95,3-95\x0A45-45,46-55\x0A57-65,56-94\x0A33-95,94-98\x0A22-88,22-28\x0A68-89,69-90\x0A10-24,11-15\x0A32-98,26-55\x0A5-83,83-83\x0A13-79,11-14\x0A44-46,45-81\x0A2-94,1-1\x0A54-64,52-64\x0A12-21,21-96\x0A38-39,7-39\x0A73-96,60-76\x0A69-94,2-70\x0A1-5,3-3\x0A36-79,28-46\x0A1-8,2-56\x0A30-31,5-30\x0A8-89,15-90\x0A7-93,30-96\x0A85-87,63-86\x0A10-10,11-77\x0A2-5,2-97\x0A16-96,17-79\x0A52-68,52-55\x0A15-91,14-38\x0A1-62,2-62\x0A63-98,62-64\x0A8-76,30-76\x0A1-3,2-93\x0A22-92,7-91\x0A11-44,12-57\x0A3-4,3-46\x0A9-9,10-86\x0A43-58,43-50\x0A13-67,64-68\x0A2-3,3-77\x0A12-97,35-99\x0A1-99,4-99\x0A29-56,15-56\x0A52-98,53-84\x0A24-80,9-59\x0A10-10,1-11\x0A12-49,19-79\x0A10-15,11-84\x0A17-71,14-18\x0A42-89,41-45\x0A3-97,97-98\x0A42-42,43-83\x0A9-74,32-74\x0A20-21,21-89\x0A55-55,54-54\x0A67-78,41-68\x0A21-22,22-93\x0A11-66,11-87\x0A11-11,11-93\x0A94-94,18-95\x0A1-99,13-99\x0A57-89,6-57\x0A18-19,18-25\x0A6-15,6-39\x0A17-96,3-95\x0A10-77,9-11\x0A34-94,33-34\x0A26-60,45-60\x0A25-25,12-98\x0A77-78,63-78\x0A29-29,29-70\x0A94-99,36-95\x0A91-91,2-92\x0A3-25,4-6\x0A78-88,79-85\x0A60-80,59-80\x0A64-93,60-89\x0A63-78,47-75\x0A36-85,84-98\x0A90-90,47-90\x0A2-39,5-39\x0A6-90,24-91\x0A12-96,21-97\x0A57-98,56-58\x0A27-76,76-76\x0A24-80,24-25\x0A50-90,89-98\x0A90-99,90-97\x0A17-44,44-45\x0A4-77,1-77\x0A46-90,47-86\x0A10-86,10-86\x0A24-80,23-80\x0A24-24,24-96\x0A20-22,20-24\x0A2-77,5-77\x0A47-61,46-46\x0A65-67,66-75\x0A8-18,7-18\x0A18-19,18-95\x0A50-85,50-85\x0A63-82,62-82\x0A2-62,47-77\x0A22-38,23-92\x0A64-90,64-74\x0A62-77,63-65\x0A14-15,15-84\x0A30-51,31-75\x0A25-38,30-39\x0A1-84,2-75\x0A38-81,39-80\x0A30-83,5-83\x0A11-91,21-90\x0A30-90,31-90\x0A25-93,92-98\x0A87-93,69-88\x0A14-51,12-60\x0A32-32,31-31\x0A33-89,50-90\x0A2-96,1-96\x0A96-99,12-97\x0A43-44,3-42\x0A2-94,3-94\x0A7-10,9-90\x0A59-65,38-65\x0A6-17,5-13\x0A37-83,38-47\x0A57-72,9-72\x0A3-4,4-42\x0A1-93,2-83\x0A34-63,11-62\x0A1-92,7-92\x0A39-39,39-63\x0A13-98,14-91\x0A96-96,2-96\x0A3-94,2-2\x0A97-97,17-98\x0A3-94,3-99\x0A18-95,17-19\x0A44-54,41-52\x0A24-29,25-69\x0A4-8,7-59\x0A16-93,8-93\x0A23-53,53-54\x0A74-98,73-73\x0A96-99,50-96\x0A33-99,33-86\x0A19-34,9-35\x0A12-30,15-47\x0A3-85,34-86\x0A11-23,13-35\x0A28-45,21-46\x0A2-99,2-50\x0A7-83,81-81\x0A39-65,40-95\x0A3-69,5-68\x0A1-94,3-93\x0A2-89,1-2\x0A1-58,3-82\x0A3-88,1-56\x0A4-21,20-39\x0A59-64,44-64\x0A49-81,81-81\x0A11-97,11-12\x0A84-84,19-85\x0A45-46,35-46\x0A4-20,3-54\x0A45-95,44-95\x0A40-40,14-41\x0A7-61,8-61\x0A41-86,85-86\x0A46-46,42-47\x0A75-75,76-76\x0A6-99,7-94\x0A57-94,58-95\x0A3-83,1-84\x0A35-35,36-58\x0A22-63,21-64\x0A85-85,86-94\x0A3-50,2-20\x0A12-78,78-91\x0A2-95,6-96\x0A18-62,26-61\x0A13-90,13-92\x0A1-17,17-67\x0A16-18,17-57\x0A32-85,32-97\x0A87-89,85-89\x0A41-62,40-63\x0A3-68,67-87\x0A26-93,21-92\x0A24-78,14-78\x0A3-51,4-51\x0A5-27,14-26\x0A26-74,25-88\x0A47-89,48-88\x0A27-97,88-96\x0A6-6,6-60\x0A24-37,23-60\x0A41-84,83-85\x0A78-80,22-79\x0A92-93,37-92\x0A18-79,17-79\x0A22-72,71-91\x0A28-39,33-35\x0A45-90,7-90\x0A4-98,90-99\x0A27-99,26-35\x0A1-99,2-2\x0A62-66,63-97\x0A65-94,93-93\x0A68-79,68-93\x0A70-70,50-71\x0A74-90,73-95\x0A7-96,73-97\x0A1-34,33-34\x0A16-93,15-15\x0A55-59,56-62\x0A2-24,4-24\x0A43-44,44-74\x0A18-97,96-97\x0A4-45,3-3\x0A13-99,98-98\x0A7-32,31-38\x0A41-44,42-49\x0A28-96,27-59\x0A5-53,5-37\x0A68-86,67-96\x0A34-63,26-64\x0A97-98,3-97\x0A30-74,31-85\x0A9-93,10-98\x0A66-93,65-76\x0A30-78,13-78\x0A29-48,33-48\x0A8-8,8-99\x0A10-78,16-78\x0A30-51,30-30\x0A19-48,19-19\x0A10-53,9-54\x0A3-91,4-91\x0A42-47,45-56\x0A47-87,46-65\x0A8-17,16-78\x0A34-75,50-74\x0A98-99,27-98\x0A16-40,29-41\x0A22-25,24-84\x0A9-83,15-84\x0A75-76,32-75\x0A11-11,12-99\x0A14-98,14-15\x0A66-66,27-66\x0A8-21,7-20\x0A4-88,34-89\x0A38-88,37-77\x0A80-81,42-81\x0A4-31,8-95\x0A8-10,9-89\x0A55-95,55-73\x0A29-87,87-88\x0A2-2,2-99\x0A28-92,96-98\x0A9-17,9-42\x0A48-95,49-94\x0A4-27,3-91\x0A43-68,42-72\x0A76-94,75-87\x0A8-9,9-96\x0A15-15,16-79\x0A15-68,14-36\x0A11-64,3-62\x0A8-78,44-77\x0A49-60,50-64\x0A15-87,16-79\x0A86-87,62-87\x0A24-60,59-60\x0A1-99,1-99\x0A26-82,26-82\x0A2-95,1-97\x0A6-92,6-93\x0A16-59,15-58\x0A7-87,87-87\x0A87-97,22-88\x0A45-46,46-46\x0A10-90,61-90\x0A16-68,4-68\x0A17-18,7-18\x0A36-90,89-89\x0A38-52,38-78\x0A13-92,13-92\x0A34-34,34-38\x0A50-51,49-82\x0A7-98,5-20\x0A5-72,61-82\x0A48-49,48-97\x0A23-54,24-80\x0A19-95,20-67\x0A13-64,64-64\x0A49-92,91-92\x0A74-84,73-83\x0A18-35,34-59\x0A61-91,10-91\x0A70-89,89-89\x0A1-47,1-2\x0A21-68,19-22\x0A38-76,38-96\x0A29-79,78-79\x0A29-88,30-73\x0A35-88,34-58\x0A21-21,22-68\x0A35-63,2-64\x0A13-56,11-11\x0A12-96,11-96\x0A6-14,9-59\x0A3-61,47-84\x0A14-33,14-15\x0A62-69,62-92\x0A33-59,32-59\x0A3-90,24-89\x0A37-98,42-99\x0A5-66,7-67\x0A28-46,12-29\x0A31-73,72-73\x0A15-75,15-96\x0A12-17,14-16\x0A92-93,8-93\x0A7-79,5-45\x0A21-32,22-29\x0A23-26,22-95\x0A2-80,4-80\x0A11-95,77-95\x0A69-98,60-96\x0A67-84,67-73\x0A81-91,91-92\x0A38-86,37-85\x0A11-11,9-30\x0A1-28,2-52\x0A20-72,20-72\x0A4-57,3-98\x0A37-40,36-40\x0A24-81,23-23\x0A20-90,3-89\x0A43-45,1-44\x0A2-77,6-77\x0A11-99,98-98\x0A63-90,62-85\x0A3-95,2-98\x0A18-21,22-43\x0A20-77,21-77\x0A53-81,45-84\x0A79-87,82-87\x0A1-87,62-90\x0A34-73,35-84\x0A56-86,17-86\x0A13-88,14-84\x0A17-83,17-82\x0A24-98,24-59\x0A8-99,9-27\x0A72-88,88-88\x0A9-93,9-82\x0A59-69,63-91\x0A20-26,20-25\x0A1-89,90-92\x0A59-97,42-81\x0A41-79,40-42\x0A28-76,28-77\x0A33-84,31-83\x0A42-74,42-75\x0A22-98,23-96\x0A17-30,16-62\x0A28-33,29-83\x0A3-97,98-98\x0A7-38,5-38\x0A61-69,35-68\x0A77-77,4-78\x0A40-44,36-46\x0A35-86,34-35\x0A57-93,56-72\x0A37-86,5-86\x0A24-76,23-76\x0A1-13,13-14\x0A69-97,6-97\x0A6-7,7-37\x0A1-24,2-6\x0A36-99,7-97\x0A10-25,24-97\x0A32-90,90-91\x0A2-99,2-94\x0A14-92,6-91\x0A24-45,23-57\x0A32-55,42-47\x0A46-85,46-47\x0A4-76,3-19\x0A80-80,80-95\x0A69-70,68-70\x0A7-96,1-81\x0A68-99,49-96\x0A22-98,23-27\x0A64-96,65-97\x0A24-51,23-50\x0A32-33,33-84\x0A20-98,19-98\x0A17-19,18-92\x0A2-98,2-98\x0A26-73,22-85\x0A36-89,23-87\x0A65-86,86-97\x0A17-76,16-91\x0A25-48,25-37\x0A42-92,38-92\x0A3-90,3-56\x0A91-98,85-92\x0A38-54,39-54\x0A7-97,7-99\x0A31-95,31-32\x0A27-94,26-28\x0A57-85,23-84\x0A52-54,53-87\x0A45-62,61-62\x0A16-17,16-75\x0A14-97,15-98\x0A1-83,82-82\x0A1-93,26-93\x0A12-97,10-96\x0A87-87,1-88\x0A29-92,30-93\x0A21-23,22-90\x0A7-78,11-79\x0A7-97,12-95\x0A8-96,7-98\x0A11-79,24-80\x0A20-35,7-31\x0A39-46,39-39\x0A38-89,39-89\x0A33-60,7-63\x0A3-59,2-2\x0A21-34,21-88\x0A1-78,2-77\x0A61-71,53-71\x0A21-53,22-53\x0A47-97,46-97\x0A47-48,47-69\x0A79-82,72-81\x0A94-96,1-95\x0A28-29,28-62\x0A51-98,51-59\x0A9-58,58-84\x0A11-74,32-74\x0A80-80,13-79\x0A12-98,12-94\x0A47-96,48-97\x0A50-97,96-99\x0A65-66,44-88\x0A38-71,70-99\x0A22-65,22-23\x0A12-56,49-55\x0A10-10,10-58\x0A30-43,39-62\x0A61-94,3-62\x0A60-87,12-60\x0A12-96,12-98\x0A1-29,13-32\x0A7-8,7-73\x0A27-74,27-74\x0A66-74,65-75\x0A53-73,72-73\x0A2-3,3-98\x0A9-18,39-46\x0A1-59,3-98\x0A9-39,8-97\x0A54-54,39-55\x0A23-73,41-91\x0A48-89,48-91\x0A17-40,7-41\x0A77-89,51-78\x0A22-80,21-80\x0A9-57,19-69\x0A28-61,29-60\x0A98-98,17-99\x0A11-83,11-83\x0A32-60,39-61\x0A11-62,11-12\x0A31-94,25-85\x0A2-13,1-7\x0A8-95,7-7\x0A62-70,91-94\x0A38-98,38-98\x0A33-94,33-78\x0A6-70,29-71\x0A14-95,2-61\x0A25-25,25-44\x0A44-70,36-52\x0A19-19,20-27\x0A20-75,5-76\x0A2-94,93-93\x0A37-40,38-40\x0A2-97,2-2\x0A57-78,56-84\x0A40-88,10-59\x0A91-96,30-91\x0A1-1,2-63\x0A21-83,20-20\x0A49-91,48-92\x0A45-58,5-51\x0A21-21,22-90\x0A95-97,7-96\x0A1-2,1-45\x0A31-70,32-70\x0A35-36,1-35\x0A12-95,12-86\x0A63-97,63-97\x0A11-34,10-27\x0A21-81,20-21\x0A80-83,74-79\x0A5-99,98-98\x0A27-38,26-87\x0A18-43,19-42\x0A3-91,2-7\x0A12-77,12-96\x0A67-76,51-75\x0A78-82,7-78\x0A47-95,46-95\x0A12-84,13-45\x0A35-65,35-75\x0A71-71,13-72\x0A2-99,98-98\x0A6-82,5-7\x0A49-50,50-52\x0A3-98,1-98\x0A61-61,22-61\x0A27-42,29-41\x0A5-21,20-80\x0A51-82,50-50\x0A2-11,4-10\x0A10-83,10-98\x0A33-33,2-33\x0A1-2,1-97\x0A17-96,3-95\x0A45-77,46-59\x0A18-58,17-18\x0A41-94,93-94\x0A2-97,95-99\x0A67-82,64-82\x0A1-94,1-94\x0A5-23,2-24\x0A16-20,6-20\x0A3-6,5-93\x0A21-35,20-45\x0A4-94,59-98\x0A53-86,40-54\x0A6-8,7-95\x0A1-97,1-1\x0A26-46,36-47\x0A82-82,52-82\x0A21-38,22-34\x0A88-94,20-94\x0A96-97,1-96\x0A36-48,35-48\x0A65-65,66-90\x0A2-97,1-2\x0A80-97,80-92\x0A74-87,68-81\x0A69-82,70-79\x0A87-96,4-95\x0A91-91,33-90\x0A17-73,73-74\x0A22-22,21-98\x0A44-63,45-64\x0A37-55,51-61\x0A51-56,56-56\x0A29-83,28-84\x0A69-70,69-97\x0A22-24,23-30\x0A7-7,8-90\x0A8-32,3-31\x0A79-79,79-91\x0A4-98,5-80\x0A1-99,2-70\x0A11-52,12-12\x0A35-88,36-88\x0A31-92,30-93\x0A8-34,33-82\x0A3-97,99-99\x0A5-86,54-70\x0A5-98,3-99\x0A4-93,1-4\x0A15-92,14-91\x0A9-94,13-94\x0A2-98,2-30\x0A9-95,29-95\x0A59-94,60-95\x0A36-95,81-98\x0A17-95,18-96\x0A3-26,25-84\x0A32-99,13-75\x0A9-44,8-97\x0A3-96,96-99\x0A21-21,20-59\x0A14-56,28-55\x0A19-35,35-84\x0A82-83,56-83\x0A89-89,78-89\x0A24-64,23-57\x0A71-71,39-72\x0A84-91,90-94\x0A18-98,19-98\x0A12-70,13-71\x0A75-95,94-95\x0A72-79,72-77\x0A11-90,10-94\x0A2-98,2-98\x0A4-86,3-87\x0A6-97,2-97\x0A68-97,45-97\x0A91-92,12-92\x0A32-59,32-98\x0A11-91,12-85\x0A28-84,74-85\x0A8-99,2-99\x0A2-69,3-9\x0A72-97,58-91\x0A4-33,3-33\x0A12-63,11-64\x0A56-56,57-70\x0A56-62,51-59\x0A17-70,18-62\x0A1-94,1-99\x0A1-78,1-1\x0A3-97,2-2\x0A"), false), HEX3Aanonymous_469762055);
+    Label1: do {
+      var line_469762101 = [];
+      var i_469762155 = 0;
+      var L_469762156 = (lines_469762080).length;
+      Label2: do {
+          Label3: while (true) {
+          if (!(i_469762155 < L_469762156)) break Label3;
+            line_469762101 = lines_469762080[chckIndx(i_469762155, 0, (lines_469762080).length - 1)];
+            var pairs_469762102 = nsuSplitString(line_469762101, makeNimstrLit(","), -1);
+            var sec1s_469762103 = nsuParseInt((Temporary4 = nsuSplitString(pairs_469762102[chckIndx(0, 0, (pairs_469762102).length - 1)], makeNimstrLit("-"), -1), Temporary4)[chckIndx(0, 0, (Temporary4).length - 1)]);
+            var sec1e_469762104 = nsuParseInt((Temporary5 = nsuSplitString(pairs_469762102[chckIndx(0, 0, (pairs_469762102).length - 1)], makeNimstrLit("-"), -1), Temporary5)[chckIndx(1, 0, (Temporary5).length - 1)]);
+            var sec2s_469762105 = nsuParseInt((Temporary6 = nsuSplitString(pairs_469762102[chckIndx(1, 0, (pairs_469762102).length - 1)], makeNimstrLit("-"), -1), Temporary6)[chckIndx(0, 0, (Temporary6).length - 1)]);
+            var sec2e_469762106 = nsuParseInt((Temporary7 = nsuSplitString(pairs_469762102[chckIndx(1, 0, (pairs_469762102).length - 1)], makeNimstrLit("-"), -1), Temporary7)[chckIndx(1, 0, (Temporary7).length - 1)]);
+            if (((sec1s_469762103 <= sec2s_469762105) && (sec2e_469762106 <= sec1e_469762104))) {
+            ctr_469762054 = addInt(ctr_469762054, 1);
+            rawEcho(makeNimstrLit("["), HEX24_335544323(sec2s_469762105), makeNimstrLit(".."), HEX24_335544323(sec2e_469762106), makeNimstrLit("]"), makeNimstrLit(" fully in "), makeNimstrLit("["), HEX24_335544323(sec1s_469762103), makeNimstrLit(".."), HEX24_335544323(sec1e_469762104), makeNimstrLit("]"));
+            }
+            else {
+            if (((sec2s_469762105 <= sec1s_469762103) && (sec1e_469762104 <= sec2e_469762106))) {
+            ctr_469762054 = addInt(ctr_469762054, 1);
+            rawEcho(makeNimstrLit("["), HEX24_335544323(sec1s_469762103), makeNimstrLit(".."), HEX24_335544323(sec1e_469762104), makeNimstrLit("]"), makeNimstrLit(" fully in "), makeNimstrLit("["), HEX24_335544323(sec2s_469762105), makeNimstrLit(".."), HEX24_335544323(sec2e_469762106), makeNimstrLit("]"));
+            }
+            else {
+            rawEcho(makeNimstrLit("["), HEX24_335544323(sec1s_469762103), makeNimstrLit(".."), HEX24_335544323(sec1e_469762104), makeNimstrLit("]"), makeNimstrLit(" no overlap "), makeNimstrLit("["), HEX24_335544323(sec2s_469762105), makeNimstrLit(".."), HEX24_335544323(sec2e_469762106), makeNimstrLit("]"));
+            }
+            }
+            i_469762155 = addInt(i_469762155, 1);
+            if (!(((lines_469762080).length == L_469762156))) {
+            failedAssertImpl_218103864(makeNimstrLit("iterators.nim(240, 11) `len(a) == L` the length of the seq changed while iterating over it"));
+            }
+            
+          }
+      } while (false);
+    } while (false);
+    result_469762052 = nimCopy(null, nsuIntToStr(ctr_469762054, 1), NTI33554439);
     break BeforeRet;
   } while (false);
 
   return result_469762052;
+
+}
+
+function js_run04_1() {
+  var result_469762152 = null;
+
+  BeforeRet: do {
+    result_469762152 = toJSStr(run04_1_469762051());
+    break BeforeRet;
+  } while (false);
+
+  return result_469762152;
 
 }
