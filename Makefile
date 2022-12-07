@@ -102,14 +102,14 @@ run_07_1: bin/solution07_1
 
 bin/solution07_1: src/solution07_1.nim input/day07.txt
 	nim c  --verbosity:0            --out:bin/ src/solution07_1.nim
-	nim js --verbosity:0 -d:release --out:js/  src/solution07_1.nim
+	# nim js --verbosity:0 -d:release --out:js/  src/solution07_1.nim
 
 run_07_2: bin/solution07_2
 	./bin/solution07_2
 
 bin/solution07_2: src/solution07_2.nim input/day07.txt
 	nim c  --verbosity:0            --out:bin/ src/solution07_2.nim
-	nim js --verbosity:0 -d:release --out:js/  src/solution07_2.nim
+	# nim js --verbosity:0 -d:release --out:js/  src/solution07_2.nim
 
 run_08_1: bin/solution08_1
 	./bin/solution08_1
