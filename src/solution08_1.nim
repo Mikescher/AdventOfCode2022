@@ -29,23 +29,24 @@ proc run08_1(): string =
                 .filterIt(it != "")
                 .mapIt(it.toSeq().map(proc(p:char):int = parseInt(p.repeat(1))))
 
-    echo grid
+    # echo grid
 
     let width = grid[0].len()
     let height = grid.len()
 
-    echo width, "x", height
+    # echo width, "x", height
 
     var visible = 0 
 
     for y in 0 ..< height:
         for x in 0 ..< width:
-            if grid_hidden(grid, x, y, width, height):
-                io.stdout.write "#"
-            else:
-                io.stdout.write "."
-                visible += 1
-        io.stdout.write "\n"
+            let hidden = grid_hidden(grid, x, y, width, height)
+            #if hidden:
+            #    io.stdout.write "#"
+            #else:
+            #    io.stdout.write "."
+            if not hidden: visible += 1
+        #io.stdout.write "\n"
 
 
     return intToStr(visible)
