@@ -116,14 +116,14 @@ run_08_1: bin/solution08_1
 
 bin/solution08_1: src/solution08_1.nim input/day08.txt
 	nim c  --verbosity:0            --out:bin/ src/solution08_1.nim
-	nim js --verbosity:0 -d:release --out:js/  src/solution08_1.nim
+	# nim js --verbosity:0 -d:release --out:js/  src/solution08_1.nim
 
 run_08_2: bin/solution08_2
 	./bin/solution08_2
 
 bin/solution08_2: src/solution08_2.nim input/day08.txt
 	nim c  --verbosity:0            --out:bin/ src/solution08_2.nim
-	nim js --verbosity:0 -d:release --out:js/  src/solution08_2.nim
+	# nim js --verbosity:0 -d:release --out:js/  src/solution08_2.nim
 
 run_09_1: bin/solution09_1
 	./bin/solution09_1
